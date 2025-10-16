@@ -1,0 +1,362 @@
+/*ESTILOS BASE */
+body {
+  font-family: 'Montserrat', sans-serif; /* Tipografía principal */
+  margin: 0;
+  background: #f6f7fb; /* Fondo gris claro */
+  color: #333; 
+}
+
+/*BARRA DE NAVEGACIÓN SUPERIOR*/
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 95%;
+  background:#ffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra inferior */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  z-index: 100; /* Se mantiene por encima del contenido */
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre logo y texto */
+}
+
+.logo {
+  width: 500px;
+  height:100px;
+}
+
+.divider {
+  width: 2px;
+  height: 40px;
+  background: #010340;
+}
+
+.slogan {
+  color: #444;
+  font-size: 14px;
+  font-style: italic; /* Letra inclinada */
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #010340;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  transition: color 0.3s; /* Animación al pasar el mouse */
+}
+
+.nav-links a:hover {
+  color: #3B82F6; /* Azul claro al pasar el mouse */
+}
+
+.nav-links img {
+  width: 30px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+/* Menú desplegable */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 55px;
+  background:#f6f7fb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Muestra el menú al pasar el mouse */
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #f6f7fb;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background: #f6f7fb; /* Color de fondo al pasar el mouse */
+}
+
+/*BANNER AZUL*/
+.banner {
+  background: #010340;
+  color:#f6f7fb;
+  text-align: center;
+  padding: 50px 10px 40px;
+  margin-top: 90px; 
+}
+
+/*CONTENEDOR PRINCIPAL*/
+.main-container {
+  display: flex;
+  padding: 30px 50px;
+  gap: 30px; /* Espacio entre filtros y catálogo */
+}
+
+/*BARRA LATERAL DE FILTROS */
+.filters {
+  background:#f6f7fb;
+  border-radius: 16px;
+  padding: 20px;
+  flex: 1;
+  max-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.filters h3 {
+  margin-top: 0;
+  color: #010340;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.filter-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-group li {
+  margin: 5px 0;
+}
+
+/* Botón de aplicar filtros */
+.apply-btn {
+  background: #010340;
+  color:#f6f7fb;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.apply-btn:hover {
+  background: #3B82F6;
+}
+
+/* Enlace para reiniciar los filtros */
+.reset-link {
+  display: block;
+  text-align: center;
+  color: #3B82F6;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/*Filtro de rango de precio corregido */
+.price-range {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.price-range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.price-range input[type="range"] {
+  width: 100%;
+  appearance: none;
+  height: 6px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+}
+
+.price-range input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #010340; /* violeta */
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  margin-top: -7px;
+}
+
+.price-range input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #010340;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+/*Seguinos*/
+.social {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social .logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.social .social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Estilo del círculo del slider para Chrome y Safari */
+.price-range input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #010340; /* Violeta */
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  margin-top: -7px; /* Centrado */
+}
+
+/* Estilo del círculo del slider para Firefox */
+.price-range input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #010340;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+/*SECCIÓN DE CATÁLOGO DE VEHÍCULOS*/
+.catalog {
+  flex: 3;
+}
+
+.vehicle-count {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Tarjetas de vehículos */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  grid-auto-rows: 1fr;
+}
+
+.card {
+  background: #f6f7fb;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Eleva la tarjeta */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Mayor sombra al pasar el mouse */
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Recorta la imagen sin deformarla */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.price {
+  display: block;
+  font-weight: 700;
+  color: #010340;
+  margin: 8px 0;
+}
+
+/* Botón dentro de las tarjetas */
+.card button {
+  background: #010340;
+  color: #f6f7fb;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: #3B82F6;
+}
+
+/*PIE DE PÁGINA (FOOTER)*/
+.footer {
+  display: flex;
+  justify-content: space-around; /* Distribuye los elementos horizontalmente */
+  align-items: center;           /* Centra verticalmente */
+  background-color: #ccc;
+  padding: 20px;
+}
+
+.logo-container {
+  flex: 0;                  /* Ocupa espacio para que quede centrado */
+  text-align: justify;       /* Centra la imagen dentro del div */
+}
+
+.logo {
+  max-width: 100px;         /* Ajusta el tamaño del logo */
+  height: auto;
+}
+
+.contacto, .horario {
+  flex: 1;
+  text-align: left;         /* Ajusta según lo necesites */
+}
+
+.copy {
+  background: #010340;
+  color: #f6f7fb;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}

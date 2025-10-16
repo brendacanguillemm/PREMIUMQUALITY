@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Vehículos OKM</title>
+
+  <style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    top: 60px; /* Ajustá si hace falta */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 0;
+  }
+
+  .dropdown-content a {
+    color: #000;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, sans-serif;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <table width="100%" style="vertical-align: middle;">
+    <tr>
+      <!-- Logo -->
+      <td width="300" align="left">
+        <a href="Inicio.html"><img src="IMAGENESHTML/LogoPremiumQuality.png" alt="PREMIUM QUALITY" width="250"></a> <!-- Redirige a otra página -->
+        
+      </td>
+
+      <!-- Línea divisoria -->
+      <td bgcolor="#010340" width="1"></td>
+
+      <!-- Texto intermedio -->
+      <td width="300" align="center">
+        <span style="font-family: Arial, sans-serif; font-style: italic; font-size: 18px; color: #555;">CONCESIONARIA<br>AUTOMOTRIZ</span>
+      </td>
+
+      <!-- Menú alineado a la derecha -->
+      <td align="right">
+        <table>
+          <tr>
+            <td align="center" width="120">
+              <img src="IMAGENESHTML/Modelos.jpg" width="40"><br>MODELOS
+            </td>
+
+            <td align="center" width="120" style="position: relative;">
+              <div class="dropdown">
+                <img src="IMAGENESHTML/Compra.jpg" width="40"><br>COMPRA
+              <div class="dropdown-content">
+                <a href="#">OKM</a>
+                <a href="#">Financiación</a>
+                <a href="usados.html">Usados</a> <!-- Redirige a otra página -->
+              </div>
+              </div>
+            </td>
+
+            <td align="center" width="120">
+              <img src="IMAGENESHTML/Srevicios.jpg" width="40"><br>SERVICIOS
+            </td>
+            <td align="center" width="120">
+              <img src="IMAGENESHTML/Ayuda.jpg" width="30"><br>AYUDA
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</header>
+<hr>
+
+<table width="100%" bgcolor="#010340">
+  <tr>
+    <td align="center" style="padding: 12px;">
+      <span style="color: white; font-family: Arial, sans-serif; font-size: 18px;">
+        ¡Personalizá y cotizá tu OKm de manera simple y práctica!
+      </span>
+    </td>
+  </tr>
+</table>
+
+<table width="100%">
+  <tr>
+    <!-- FILTROS -->
+    <td width="250" valign="top">
+      <span style="font-family: Arial, sans-serif; font-size: 19px; color: #000000;">Filtros</span><br><br>
+      <strong>Precio sugerido al público</strong><br>
+      <input type="range" min="20895000" max="75101000"><br>
+      <small>$20.895.000 - $95.101.000</small><br><br>
+
+      <strong>Carrocería</strong><br>
+      <input type="checkbox" id="auto"><label for="auto"> Auto</label><br>
+      <input type="checkbox" id="pickup"><label for="pickup"> Pick-Up</label><br>
+      <input type="checkbox" id="suv"><label for="suv"> SUV</label><br>
+      <input type="checkbox" id="comercial"><label for="comercial"> Comercial</label><br><br>
+
+      <strong>Otros Filtros</strong><br>
+      <input type="checkbox" id="hibridos"><label for="hibridos"> Híbridos</label><br>
+      <input type="checkbox" id="deportivos"><label for="deportivos"> Deportivos</label><br><br>
+
+      <p align="center"><a href="#">Reiniciar Filtros</a></p>
+    </td>
+
+    <!-- Separador -->
+    <td bgcolor="#CCCCCC" width="1"></td>
+
+    <!-- CATÁLOGO -->
+    <td valign="top">
+
+      <span style="font-family: Arial, sans-serif; font-size: 10px; color: #555;">38 Vehículos</span><br><br>
+
+<!-- =================== TOYOTA =================== -->
+<span style="font-family: Arial, sans-serif; font-size: 25px; color: #000000;">TOYOTA</span>
+
+<table width="100%">
+  <tr>
+    <td align="center"><img src="IMAGENESHTML/ToyotaCorolla.jpg" width="305"><br>Corolla</td>
+    <td align="center"><img src="IMAGENESHTML/ToyotaCorollaGR-Sport.jpg" width="300"><br>Corolla GR-Sport</td>
+    <td align="center"><img src="IMAGENESHTML/ToyotaCrown.jpg" width="300"><br>Crown</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="IMAGENESHTML/ToyotaCorollaHybrid.jpg" width="300"><br>Corolla Cross Hybrid</td>
+    <td align="center"><img src="IMAGENESHTML/ToyotaSW4.jpg" width="300"><br>SW4</td>
+    <td></td>
+  </tr>
+</table>
+<div align="right"><a href="#">VER MÁS +</a></div>
+<hr>
+<br>
+
+<!-- =================== VOLKSWAGEN =================== -->
+<span style="font-family: Arial, sans-serif; font-size: 25px; color: #000000;">VOLKSWAGEN</span>
+<table width="100%">
+  <tr>
+    <td align="center"><img src="IMAGENESHTML/VolkswagenPolo.jpg" width="300"><br>Polo</td>
+    <td align="center"><img src="IMAGENESHTML/VolkswagenVirtus.jpg" width="300"><br>Virtus</td>
+    <td align="center"><img src="IMAGENESHTML/VolkswagenTaos.jpg" width="300"><br>Taos</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="IMAGENESHTML/VolkswagenT-Cross.jpg" width="300"><br>T-Cross</td>
+    <td align="center"><img src="IMAGENESHTML/VolkswagenAmarok.jpg" width="300"><br>Amarok</td>
+    <td align="center"><img src="IMAGENESHTML/VolkswagenNivus.jpg" width="300"><br>Nivus</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="IMAGENESHTML/VolkswagenAmarokV6.jpg" width="300"><br>Amarok V6</td>
+    <td align="center"><img src="IMAGENESHTML/VolkswagenVento.jpg" width="300"><br>Vento</td>
+    <td></td>
+  </tr>
+</table>
+<div align="right"><a href="#">VER MÁS +</a></div>
+<hr>
+<br>
+
+<!-- =================== CHEVROLET =================== -->
+<span style="font-family: Arial, sans-serif; font-size: 25px; color: #000000;">CHEVROLET</span>
+<table width="100%">
+  <tr>
+    <td align="center"><img src="IMAGENESHTML/ChevroletOnix.jpg" width="300"><br>Onix</td>
+    <td align="center"><img src="IMAGENESHTML/ChevroletOnixPlus.jpg" width="300"><br>Onix Plus</td>
+    <td align="center"><img src="IMAGENESHTML/ChevroletCruzeRS.jpg" width="300"><br>Onix RS</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="IMAGENESHTML/ChevroletCruze.jpg" width="300"><br>Cruze</td>
+    <td align="center"><img src="IMAGENESHTML/ChevroletCruze5.jpg" width="300"><br>Cruze 5</td>
+    <td></td>
+  </tr>
+</table>
+<div align="right"><a href="#">VER MÁS +</a></div>
+<hr>
+<br>
+
+<!-- =================== RENAULT =================== -->
+<span style="font-family: Arial, sans-serif; font-size: 25px; color: #000000;">RENAULT</span>
+<table width="100%">
+  <tr>
+    <td align="center"><img src="IMAGENESHTML/RenaultKwid.jpg" width="300"><br>Kwid</td>
+    <td align="center"><img src="IMAGENESHTML/RenaultLogan.jpg" width="300"><br>Logan</td>
+    <td align="center"><img src="IMAGENESHTML/RenaultStepway.jpg" width="300"><br>Stepway</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="IMAGENESHTML/RenaultKangoo.jpg" width="300"><br>Kangoo</td>
+    <td align="center"><img src="IMAGENESHTML/RenaultDuster.jpg" width="300"><br>Duster</td>
+    <td align="center"><img src="IMAGENESHTML/RenaultKardian.jpg" width="300"><br>Kardian</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="IMAGENESHTML/RenaultKoleos.jpg" width="300"><br>Koleos</td>
+    <td></td><td></td>
+  </tr>
+</table>
+<div align="right"><a href="#">VER MÁS +</a></div>
+<hr>
+<br>
+
+<!-- =================== HONDA =================== -->
+<span style="font-family: Arial, sans-serif; font-size: 25px; color: #000000;">HONDA</span>
+<table width="100%">
+  <tr>
+    <td align="center"><img src="IMAGENESHTML/HondaAdvencedHybrid.jpg" width="300"><br>Civic Advanced Hybrid</td>
+    <td align="center"><img src="IMAGENESHTML/HonadaNewCR-V.jpg" width="300"><br>New CR-V / Advanced Hybrid</td>
+    <td align="center"><img src="IMAGENESHTML/HondaNewHR-V.jpg" width="300"><br>New HR-V</td>
+  </tr>
+</table>
+<div align="right"><a href="#">VER MÁS +</a></div>
+<hr>
+
+    </td>
+  </tr>
+</table>
+
+<!-- Pie de página estilo imagen -->
+<table width="100%" bgcolor="#D9D9D9" style="padding: 20px;">
+  <tr>
+    <!-- Columna 1: Logo -->
+    <td width="33%" align="center">
+      <img src="IMAGENESHTML/LogoPremiumQuality.png" alt="Logo Premium Quality" width="200">
+    </td>
+
+    <!-- Columna 2: Dirección -->
+    <td width="33%" align="center" style="font-family: Arial, sans-serif; font-size: 14px;">
+      <strong>CANNING</strong><br>
+      <img src="IMAGENESHTML/IconoUbicación.png" width="16"> Av. Mariano Castex 511 - Canning <br>
+      <img src="IMAGENESHTML/IconoTelefono.png" width="16" ><a href="https://wa.me/5491112345678" target="_blank">(+54 11) 2152-9350</a>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=ConcesionariaPQ@gmail.com&su=Consulta&body=Hola,%20quiero%20más%20información" target="_blank">
+  ConcesionariaPQ@gmail.com
+</a>
+    </td>
+
+    <!-- Columna 3: Horarios -->
+    <td width="33%" align="center" style="font-family: Arial, sans-serif; font-size: 14px;">
+      <strong>HORARIO DE ATENCIÓN</strong><br>
+      Lunes a Sábados<br>
+      09:00 hs a 18:00 hs
+    </td>
+  </tr>
+</table>
+
+<footer>
+  <p align="center">© 2025 Concesionaria PREMIUM QUALITY</p>
+</footer>
+
+</body>
+</html>
