@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../Diseño/DiseñoUsados.css">
   <link rel="stylesheet" href="../Diseño/DiseñoVentana.css">
+  <link rel="stylesheet" href="../Diseño/Carrusel.css">
 </head>
 
 <body>
@@ -83,7 +84,6 @@
 
       <button class="apply-btn">Aplicar filtros</button>
       <a href="#" class="reset-link">Reiniciar filtros</a>
-
       <hr>
 
       <div class="social">
@@ -106,7 +106,7 @@
           <h4>Hyundai Tucson 2.0 A/T</h4>
           <p>Año 2017 • 96.000 km</p>
           <span class="price">$25.800.000</span>
-          <button id="abrir">Ver detalles</button>
+          <button class="abrir">Ver detalles</button>
         </div>
 
         <div class="card">
@@ -114,7 +114,7 @@
           <h4>Citroën Berlingo Furgón 1.6</h4>
           <p>Año 2023 • 20.000 km</p>
           <span class="price">$22.500.000</span>
-          <button id="abrir">Ver detalles</button>
+          <button class="abrir">Ver detalles</button>
         </div>
 
         <div class="card">
@@ -122,7 +122,7 @@
           <h4>Renault Kangoo II 1.5 DCI</h4>
           <p>Año 2022 • 73.000 km</p>
           <span class="price">$23.500.000</span>
-          <button>Ver detalles</button>
+          <button class="abrir">Ver detalles</button>
         </div>
 
         <div class="card">
@@ -130,7 +130,7 @@
           <h4>TOYOTA HILUX SRV AT 4x4</h4>
           <p>Año 2024 • 20.715 km</p>
           <span class="price">$54.900.000</span>
-          <button>Ver detalles</button>
+          <button class="abrir">Ver detalles</button>
         </div>
       </div>
     </section>
@@ -158,12 +158,39 @@
   </div>
 
   <dialog id="ventana">
-    <h3>¡Hola!</h3>
-    <h2>Brenda Cara de Verga<h2>
-    <button id="cerrar">Cerrar</button>
-  </dialog>
+  <h2>TOYOTA HILUX SRV AT 4x4</h2>
 
-   <script src="../VentanaDA.js"></script>
+  <div class="carousel">
+  <button class="prev" onclick="changeSlide(1)">&#10094;</button>
+  
+  <div class="slides" id="slides">
+    <img src="../IMAGENESHTML/TOYOTA4X4Usados1.jpg" alt="Imagen 1">
+    <img src="../IMAGENESHTML/TOYOTA4X4Usados2.jpg" alt="Imagen 2">
+    <img src="../IMAGENESHTML/TOYOTA4X4Usados3.jpg" alt="Imagen 3">
+    <img src="../IMAGENESHTML/TOYOTA4X4Usados4.jpg" alt="Imagen 4">
+    <img src="../IMAGENESHTML/TOYOTA4X4Usados5.jpg" alt="Imagen 5">
+  </div>
+  
+  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
 
+  <hr>
+
+  <span class="price">$54.900.000</span>
+
+  <div class="car-info">
+    <div><img src="../IMAGENESHTML/Combustible.png" alt=""> Motor diésel 2.8L</div>
+    <div><img src="../IMAGENESHTML/Caja.png" alt=""> Caja automática 6 velocidades</div>
+    <div><img src="../IMAGENESHTML/Calendario.png" alt=""> Año 2024</div>
+    <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> 20.715 km</div>
+  </div>
+
+  <hr>
+
+  <button id="cerrar">Cerrar</button>
+</dialog>
+
+   <script src="../VentanaDA.js"></script> 
+   <script src="../Carrusel.js"></script>
 </body>
 </html> 
