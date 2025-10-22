@@ -1,37 +1,28 @@
 .carousel {
   position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.slides {
   display: flex;
-  transition: transform 0.5s ease;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .slides img {
   width: 100%;
-  border-radius: 8px;
+  display: none;
 }
 
-/* Botones del carrusel */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.4);
   color: white;
+  font-size: 2rem;
   border: none;
-  padding: 10px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  border-radius: 50%;
+  z-index: 10; /* 🔥 Esto evita que se oculte */
 }
 
 .prev { left: 10px; }
 .next { right: 10px; }
-
-.prev:hover, .next:hover {
-  background: rgba(0, 0, 0, 0.8);
-}

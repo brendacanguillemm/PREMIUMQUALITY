@@ -158,37 +158,26 @@
   </div>
 
   <dialog id="ventana">
-  <h2>TOYOTA HILUX SRV AT 4x4</h2>
+  <h2 id="titulo-auto"></h2>
 
   <div class="carousel">
-  <button class="prev" onclick="changeSlide(1)">&#10094;</button>
-  
-  <div class="slides" id="slides">
-    <img src="../IMAGENESHTML/TOYOTA4X4Usados1.jpg" alt="Imagen 1">
-    <img src="../IMAGENESHTML/TOYOTA4X4Usados2.jpg" alt="Imagen 2">
-    <img src="../IMAGENESHTML/TOYOTA4X4Usados3.jpg" alt="Imagen 3">
-    <img src="../IMAGENESHTML/TOYOTA4X4Usados4.jpg" alt="Imagen 4">
-    <img src="../IMAGENESHTML/TOYOTA4X4Usados5.jpg" alt="Imagen 5">
+    <button class="prev" id="prev">&#10094;</button>
+    <div class="slides" id="slides"></div>
+    <button class="next" id="next">&#10095;</button>
   </div>
-  
-  <button class="next" onclick="changeSlide(1)">&#10095;</button>
-</div>
 
   <hr>
 
-  <span class="price">$54.900.000</span>
+  <span class="price" id="precio-auto"></span>
 
-  <div class="car-info">
-    <div><img src="../IMAGENESHTML/Combustible.png" alt=""> Motor diésel 2.8L</div>
-    <div><img src="../IMAGENESHTML/Caja.png" alt=""> Caja automática 6 velocidades</div>
-    <div><img src="../IMAGENESHTML/Calendario.png" alt=""> Año 2024</div>
-    <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> 20.715 km</div>
-  </div>
+  <!-- 🔹 Acá se van a insertar dinámicamente los datos del vehículo -->
+  <div class="car-info" id="info-auto"></div>
 
   <hr>
 
   <button id="cerrar">Cerrar</button>
-</dialog>
+  </dialog>
+
 
    <script src="../VentanaDA.js"></script> 
    <script src="../Carrusel.js"></script>
