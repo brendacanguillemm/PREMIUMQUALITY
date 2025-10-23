@@ -11,8 +11,9 @@ const autos = [
     ],
     imagenes: [
       "../IMAGENESHTML/Hyundai.jpg",
-      "../IMAGENESHTML/Hyundai2.jpg",
-      "../IMAGENESHTML/Hyundai3.jpg"
+      "../IMAGENESHTML/Hyundai-Tucson-2..jpg",
+      "../IMAGENESHTML/Hyundai-Tucson1.jpg",
+      "../IMAGENESHTML/Hyundai-Tucson3.jpg"
     ]
   },
   {
@@ -26,8 +27,7 @@ const autos = [
     ],
     imagenes: [
       "../IMAGENESHTML/CitroenBerlingo.jpg",
-      "../IMAGENESHTML/CitroenBerlingo2.jpg",
-      "../IMAGENESHTML/CitroenBerlingo3.jpg"
+      "../IMAGENESHTML/Citroen-Berlingo-.jpg"
     ]
   },
   {
@@ -40,9 +40,8 @@ const autos = [
       "73.000 km"
     ],
     imagenes: [
-      "../IMAGENESHTML/RenaultKangooII.jpg",
-      "../IMAGENESHTML/RenaultKangooII2.jpg",
-      "../IMAGENESHTML/RenaultKangooII3.jpg"
+      "../IMAGENESHTML/Renault Kangoo II.jpg",
+      "../IMAGENESHTML/Renault-Kangoo.jpg"
     ]
   },
   {
