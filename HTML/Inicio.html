@@ -6,104 +6,124 @@
      <link rel="stylesheet" href="DiseñoInicio.css">
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../Diseño/DiseñoInicio.css">
+   <link rel="stylesheet" href="../Diseño/DiseñoVentana.css">
+   <link rel="stylesheet" href="../Diseño/Carrusel.css">
 </head>
 <body>
-<header class = "menu">
-  <table width="100%" style="vertical-align: middle;">
-    <tr>
-      <!-- Logo -->
-      <td width="300" align="left">
-        <img src="../IMAGENESHTML/LogoPremiumQuality.png" alt="PREMIUM QUALITY" width="250">
-      </td>
+<header class="menu">
+  <div class="menu-left">
+    <img src="../IMAGENESHTML/LogoPremiumQuality.png" alt="PREMIUM QUALITY">
+    <span class="subtext">CONCESIONARIA<br>AUTOMOTRIZ</span>
+  </div>
 
-      <!-- Línea divisoria -->
-      <td bgcolor="#010340" width="1"></td>
+  <nav class="menu-nav">
+    <div class="nav-item">
+      <img src="../IMAGENESHTML/Modelos.jpg" width="35"><br>MODELOS
+    </div>
 
-      <!-- Texto intermedio -->
-      <td width="300" align="center">
-        <span style="font-family: Arial, sans-serif; font-style: italic; font-size: 18px; color: #555;">CONCESIONARIA<br>AUTOMOTRIZ</span>
-      </td>
+    <div class="nav-item dropdown">
+      <img src="../IMAGENESHTML/Compra.jpg" width="35"><br>COMPRA
+      <div class="dropdown-content">
+        <a href="../HTML/0KM.html">0KM</a>
+        <a href="#">Financiación</a>
+        <a href="../HTML/Usados.html">Usados</a>
+      </div>
+    </div>
 
-      <!-- Menú alineado a la derecha -->
-      <td align="right">
-        <table>
-          <tr>
-            <td align="center" width="120">
-              <img src="../IMAGENESHTML/Modelos.jpg" width="40"><br>MODELOS
-            </td>
+    <div class="nav-item">
+      <img src="../IMAGENESHTML/Srevicios.jpg" width="35"><br>SERVICIOS
+    </div>
 
-            <td align="center" width="120" style="position: relative;">
-              <div class="dropdown">
-                <img src="../IMAGENESHTML/Compra.jpg" width="40"><br>COMPRA
-              <div class="dropdown-content">
-                <a href="../HTML/0KM.html">0KM</a> <!-- Redirige a otra página -->
-                <a href="#">Financiación</a>
-                <a href="../HTML/Usados.html">Usados</a> <!-- Redirige a otra página -->
-              </div>
-              </div>
-            </td>
-
-            <td align="center" width="120">
-              <img src="../IMAGENESHTML/Srevicios.jpg" width="40"><br>SERVICIOS
-            </td>
-            <td align="center" width="120">
-              <img src="../IMAGENESHTML/Ayuda.jpg" width="30"><br>AYUDA
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-  <hr class="hr">
+    <div class="nav-item">
+      <img src="../IMAGENESHTML/Ayuda.jpg" width="25"><br>AYUDA
+    </div>
+  </nav>
 </header>
-<hr>
+
 <div class="contenido">
   <!-- VIDEO DE FONDO -->
   <video width="100%" autoplay muted loop style="display: block;">
     <source src="../Video/Autoo.mp4" type="video/mp4">
   </video>
 
-  <table width="100%">
-         <tr>
-    <td align="center"><img src="../IMAGENES/Toyota RAV 4.png" width="305"><br>Toyota RAV 4</td>
-    <td align="center"><img src="../IMAGENES/Renault Oroch .png" width="300"><br>Renault Oroch</td>
-    <td align="center"><img src="../IMAGENES/Chevrolet  Silverado.png" width="300"><br>Chevrolet Silverado</td>
-  </tr>
+  <div class="card-container">
+    <div class="card">
+      <img src="../IMAGENES/Toyota RAV 4.png" width="305">
+      <p>Toyota RAV 4</p>
+      <button class="abrir">+</button>
+    </div>
+
+    <div class="card">
+      <img src="../IMAGENES/Renault Oroch .png" width="300">
+      <p>Renault Oroch</p>
+      <button class="abrir">+</button>
+    </div>
+
+    <div class="card">
+      <img src="../IMAGENES/Chevrolet  Silverado.png" width="300">
+      <p>Chevrolet Silverado</p>
+      <button class="abrir">+</button>
+    </div>
+ 
+  </div>
+
+  <table width="100%" bgcolor="#010340">
+    <tr>
+      <td align="center" style="padding: 12px;">
+        <span style="color: white; font-family: Arial, sans-serif; font-size: 18px;">
+          ¡Contamos con nuestro servecio de financiacion para que obtengas el vehiculo de tus sueños con total facilidad! 
+        </span>
+      </td>
+    </tr>
   </table>
+
+  </table>
+    <footer class="footer">
+      <div class="logo-container">
+          <img src="../IMAGENESHTML/LogoPremiumQuality.png" width="350">
+        </div>
+        <div class="footer-col">
+          <h4>CANNING</h4>
+          <p><img src="../IMAGENESHTML/IconoUbicación.png" width="16"> Av. Mariano Castex 511 - Canning</p>
+          <p><img src="../IMAGENESHTML/IconoTelefono.png" width="16"> (+54 11) 2152-9350</p>
+          <p><a href="mailto:ConcesionariaPQ@gmail.com">ConcesionariaPQ@gmail.com</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>HORARIO DE ATENCIÓN</h4>
+          <p>Lunes a Sábado</p>
+          <p>09:00 hs a 18:00 hs</p>
+        </div>
+    </footer>
+
+      <div class="copy">
+        © 2025 Concesionaria PREMIUM QUALITY
+      </div>
+
+  <dialog id="ventana">
+  <h2 id="titulo-auto"></h2>
+
+  <div class="carousel">
+    <button class="prev" id="prev">&#10094;</button>
+    <div class="slides" id="slides"></div>
+    <button class="next" id="next">&#10095;</button>
+  </div>
 
   <hr>
 
-  <table width="100%" bgcolor="#010340">
-  <tr>
-    <td align="center" style="padding: 12px;">
-      <span style="color: white; font-family: Arial, sans-serif; font-size: 18px;">
-        ¡Contamos con nuestro servecio de financiacion para que obtengas el vehiculo de tus sueños con total facilidad! 
-      </span>
-    </td>
-  </tr>
-</table>
-<hr>
+  <span class="price" id="precio-auto"></span>
 
-</table>
- <footer class="footer">
-  <div class="logo-container">
-      <img src="../IMAGENESHTML/LogoPremiumQuality.png" width="350">
-    </div>
-    <div class="footer-col">
-      <h4>CANNING</h4>
-      <p><img src="../IMAGENESHTML/IconoUbicación.png" width="16"> Av. Mariano Castex 511 - Canning</p>
-      <p><img src="../IMAGENESHTML/IconoTelefono.png" width="16"> (+54 11) 2152-9350</p>
-      <p><a href="mailto:ConcesionariaPQ@gmail.com">ConcesionariaPQ@gmail.com</a></p>
-    </div>
-    <div class="footer-col">
-      <h4>HORARIO DE ATENCIÓN</h4>
-      <p>Lunes a Sábados</p>
-      <p>09:00 hs a 18:00 hs</p>
-    </div>
-  </footer>
+  <!--Acá se van a insertar dinámicamente los datos del vehículo -->
+  <div class="car-info" id="info-auto"></div>
 
-  <div class="copy">
-    © 2025 Concesionaria PREMIUM QUALITY
-  </div>
+  <hr>
+  <br>
+   Ingrese un correo  <input>  <br><br>
+  <button id="cerrar">Cerrar</button>
+  </dialog>
+
+   <script src="../VentanaDA.js"></script> 
+   <script src="../Carrusel.js"></script>
+
+
 </body>
 </html>
