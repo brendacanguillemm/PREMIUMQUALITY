@@ -83,7 +83,6 @@ const autos = [
 
 ];
 
-const botones = document.querySelectorAll(".abrir");
 const dialog = document.getElementById("ventana");
 const cerrar = document.getElementById("cerrar");
 
@@ -94,21 +93,44 @@ const slides = document.getElementById("slides");
 
 let slideIndex = 0;
 
-botones.forEach((btn, i) => {
+const botonesInicio = document.querySelectorAll(".abrir-inicio");
+
+botonesInicio.forEach((btn, i) => {
+  btn.addEventListener("click", () => {
+    const autoInicio = autosInicio[i];
+    titulo.textContent = autoInicio.titulo;
+    precio.textContent = autoInicio.precio;
+
+    info.innerHTML = `
+      <div><img src="../IMAGENESHTML/Combustible.png" alt=""> ${autoInicio.info[0]}</div>
+      <div><img src="../IMAGENESHTML/Caja.png" alt=""> ${autoInicio.info[1]}</div>
+      <div><img src="../IMAGENESHTML/Calendario.png" alt=""> ${autoInicio.info[2]}</div>
+      <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> ${autoInicio.info[3]}</div>
+    `;
+
+    slides.innerHTML = autoInicio.imagenes
+      .map((src, idx) => `<img src="${src}" class="slide" style="display:${idx === 0 ? "block" : "none"}">`)
+      .join("");
+
+    slideIndex = 0;
+    dialog.showModal();
+  });
+});
+const botonesUsados = document.querySelectorAll(".abrir");
+
+botonesUsados.forEach((btn, i) => {
   btn.addEventListener("click", () => {
     const auto = autos[i];
     titulo.textContent = auto.titulo;
     precio.textContent = auto.precio;
 
-    //Cargamos los datos con íconos
     info.innerHTML = `
       <div><img src="../IMAGENESHTML/Combustible.png" alt=""> ${auto.info[0]}</div>
       <div><img src="../IMAGENESHTML/Caja.png" alt=""> ${auto.info[1]}</div>
       <div><img src="../IMAGENESHTML/Calendario.png" alt=""> ${auto.info[2]}</div>
       <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> ${auto.info[3]}</div>
     `;
-    
-    //Cargamos las imágenes del carrusel
+
     slides.innerHTML = auto.imagenes
       .map((src, idx) => `<img src="${src}" class="slide" style="display:${idx === 0 ? "block" : "none"}">`)
       .join("");
@@ -117,31 +139,6 @@ botones.forEach((btn, i) => {
     dialog.showModal();
   });
 });
-
-
-botones.forEach((btn, i) => {
-  btn.addEventListener("click", () => {
-    const autosInicio = autosInicio[i];
-    titulo.textContent = autosInicio.titulo;
-    precio.textContent = autosInicio.precio;
-
-    info.innerHTML = `
-      <div><img src="../IMAGENESHTML/Combustible.png" alt=""> ${autosInicio.info[0]}</div>
-      <div><img src="../IMAGENESHTML/Caja.png" alt=""> ${autosInicio.info[1]}</div>
-      <div><img src="../IMAGENESHTML/Calendario.png" alt=""> ${autosInicio.info[2]}</div>
-      <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> ${autosInicio.info[3]}</div>
-    `;
-
-    //Cargamos las imágenes del carrusel
-    slides.innerHTML = autosInicio.imagenes
-      .map((src, idx) => `<img src="${src}" class="slide" style="display:${idx === 0 ? "block" : "none"}">`)
-      .join("");
-
-    slideIndex = 0;
-    dialog.showModal();
-  });
-});
-
 
 cerrar.addEventListener("click", () => dialog.close());
 
