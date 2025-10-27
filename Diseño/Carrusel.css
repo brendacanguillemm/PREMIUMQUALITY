@@ -21,7 +21,7 @@
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  z-index: 10; /* 🔥 Esto evita que se oculte */
+  z-index: 10; /*Esto evita que se oculte */
 }
 
 .prev { left: 10px; }

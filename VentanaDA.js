@@ -1,4 +1,4 @@
-// Datos de cada vehículo 
+// Autos Usados
 const autos = [
   {
     titulo: "Hyundai Tucson 2.0 A/T",
@@ -69,9 +69,9 @@ const autos = [
     titulo: "Toyota RAV 4",
     precio: "$48.921.000",
     info: [
-      "Motor 4 cil. de 2.5 L con motores de manejo eléctrico adelante/atrás",
-      "Transmisión Continuamente Variable Controlada Electrónicamente (ECVT)",
-      "TREN DE POTENCIA Tracción Permanente en las Cuatro Ruedas (AWD) electrónica On-Demand",
+      "Motor 4 cil. de 2.5 L",
+      "Transmisión Automatica",
+      "-",
       "0km"
     ],
     imagenes: [
@@ -79,8 +79,184 @@ const autos = [
       "../IMAGENESHTML/RAV4 Hybrid 2.png",
       "../IMAGENESHTML/RAV4 Hybrid 3.png"
     ]
+  },
+  {
+    titulo: "Renault Oroch",
+    precio: "$42.200.000",
+    info: [
+      "Motor 1.6",
+      "Caja automática 6 velocidades",
+      "-",
+      "0km"
+    ],
+    imagenes: [
+      "../IMAGENESHTML/Renault-Oroch1.png",
+      "../IMAGENESHTML/Renault-Oroch2.png",
+      "../IMAGENESHTML/Renault-Oroch3.jpg",
+      "../IMAGENESHTML/Renault-Oroch4.jpg"
+    ]
+  },
+  {
+    titulo: "Chevrolet Silverado",
+    precio: "$72.560.000",
+    info: [
+      "Motor 1.6",
+      "Transmisión automática de 10 velocidades",
+      "-",
+      "0km"
+    ],
+    imagenes: [
+      "../IMAGENESHTML/Chevrolet-Silverado1-removebg-preview.png",
+      "../IMAGENESHTML/Chevrolet-Silverado2-removebg-preview.png",
+      "../IMAGENESHTML/Chevrolet-Silverado3-removebg-preview.png",
+      "../IMAGENESHTML/Chevrolet-Silverado4.png"
+    ]
   }
+]
 
+  //Autos Okm
+  //TOYOTA
+  const autos0km = [
+ {
+    titulo: "GR-Sport",
+    precio: "$40.921.000",
+    info: [
+      "Motor1.6",
+      "Transmisión Automatica",
+      "-",
+      "0km"
+    ],
+    imagenes: [
+      "../IMAGENESHTML/GR-Sport-1.jpg",
+      "../IMAGENESHTML/GR-Sport.jpg",
+      "../IMAGENESHTML/GR-Sport.png"
+    ]
+  
+  },
+  {
+    titulo: "Crown",
+    precio: "$52.200.000",
+    info: [
+      "Motor 1.8",
+      "Caja automática 6 velocidades",
+      "-",
+      "0km"
+    ],
+    imagenes: [
+      "../IMAGENESHTML/Crown.jpg",
+      "../IMAGENESHTML/Crown1.jpg",
+      "../IMAGENESHTML/Crown2.jpg"
+    ]
+  },
+  {
+    titulo: "SW4",
+    precio: "$75.560.000",
+    info: [
+      "Motor 1.6",
+      "Transmisión automática de 10 velocidades",
+      "-",
+      "0km"
+    ],
+    imagenes: [
+      "../IMAGENESHTML/SW4-1.png",
+      "../IMAGENESHTML/SW4-2.png",
+      "../IMAGENESHTML/SW4-3.jpg", 
+      "../IMAGENESHTML/SW4-4.png"
+    ]
+  },
+   //VOLKSWAGEN
+  {
+    titulo: "T-Cross",
+    precio: "$75.560.000",
+    info: [
+      "Motor 1.6",
+      "Transmisión automática de 10 velocidades",
+      "-",
+      "0km"
+    ],
+    imagenes: [
+      "../IMAGENESHTML/VolkswagenT-Cross.jpg",
+      "../IMAGENESHTML/T-Cross1.jpg",
+      "../IMAGENESHTML/T-Cross2.jpg", 
+      "../IMAGENESHTML/T-Cross3.jpg",
+      "../IMAGENESHTML/T-Cross4.jpg",
+      "../IMAGENESHTML/T-Cross5.jpg",
+      "../IMAGENESHTML/T-Cross6.jpg"
+    ]
+  },
+
+  {
+    titulo: "Nivus",
+    precio: "$75.560.000",
+    info: [
+      "Motor 1.6",
+      "Transmisión automática de 10 velocidades",
+      "-",
+      "0km"
+    ],
+    imagenes: [
+      "../IMAGENESHTML/VolkswagenT-Cross.jpg",
+      "../IMAGENESHTML/NIVUS1.jpg",
+      "../IMAGENESHTML/NIVUS2.jpg"
+    ]
+  },
+  {
+    titulo: "Amarok V6",
+    precio: "$75.560.000",
+    info: [
+      "Motor 1.6",
+      "Transmisión automática de 10 velocidades",
+      "-",
+      "0km"
+    ],
+    imagenes: [
+      "../IMAGENESHTML/INTERIOR-CONFORT-2.jpg",
+      "../IMAGENESHTML/Amarok.jpg",
+    ]
+  },
+  //CHEVROLET
+  {
+    titulo: "Onix",
+    precio: "$75.560.000",
+    info: [
+      "Motor 1.6",
+      "Transmisión automática de 10 velocidades",
+      "-",
+      "0km"
+    ],
+    imagenes: [
+      "../IMAGENESHTML/Onix.jpg",
+      "../IMAGENESHTML/OnixInterior.jpg"
+    ]
+  },
+    {
+    titulo: "Onix Plus",
+    precio: "$75.560.000",
+    info: [
+      "Motor 1.6",
+      "Transmisión automática de 10 velocidades",
+      "-",
+      "0km"
+    ],
+    imagenes: [
+      "../IMAGENESHTML/onix-plus-lateral.jpg",
+      "../IMAGENESHTML/OnixInterior.jpg"
+    ]
+  },
+    {
+    titulo: "Cruze 5",
+    precio: "$75.560.000",
+    info: [
+      "Motor 1.6",
+      "Transmisión automática de 10 velocidades",
+      "-",
+      "0km"
+    ],
+    imagenes: [
+      "../IMAGENESHTML/ChevroletCruze5.jpg",
+      "../IMAGENESHTML/design-02.jpg"
+    ]
+  }
 ];
 
 const dialog = document.getElementById("ventana");
@@ -93,6 +269,7 @@ const slides = document.getElementById("slides");
 
 let slideIndex = 0;
 
+// INICIO 
 const botonesInicio = document.querySelectorAll(".abrir-inicio");
 
 botonesInicio.forEach((btn, i) => {
@@ -116,6 +293,8 @@ botonesInicio.forEach((btn, i) => {
     dialog.showModal();
   });
 });
+
+//USADOS
 const botonesUsados = document.querySelectorAll(".abrir");
 
 botonesUsados.forEach((btn, i) => {
@@ -140,6 +319,32 @@ botonesUsados.forEach((btn, i) => {
   });
 });
 
+
+//0KM
+const botones0km = document.querySelectorAll(".abrir0km");
+
+botones0km.forEach((btn, i) => {
+  btn.addEventListener("click", () => {
+    const autos0km = autos0km[i];
+    titulo.textContent = autos0km.titulo;
+    precio.textContent = autos0km.precio;
+
+    info.innerHTML = `
+      <div><img src="../IMAGENESHTML/Combustible.png" alt=""> ${autos0km.info[0]}</div>
+      <div><img src="../IMAGENESHTML/Caja.png" alt=""> ${autos0km.info[1]}</div>
+      <div><img src="../IMAGENESHTML/Calendario.png" alt=""> ${autos0km.info[2]}</div>
+      <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> ${autos0km.info[3]}</div>
+    `;
+
+    slides.innerHTML = autos0km.imagenes
+      .map((src, idx) => `<img src="${src}" class="slide" style="display:${idx === 0 ? "block" : "none"}">`)
+      .join("");
+
+    slideIndex = 0;
+    dialog.showModal();
+  });
+});
+
 cerrar.addEventListener("click", () => dialog.close());
 
 // Función para mover el carrusel
@@ -152,3 +357,12 @@ function changeSlide(n) {
   slideIndex = (slideIndex + n + imgs.length) % imgs.length;
   imgs[slideIndex].style.display = "block";
 }
+
+
+
+
+
+
+
+
+
