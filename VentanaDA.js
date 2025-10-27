@@ -3,6 +3,8 @@ const autos = [
   {
     titulo: "Hyundai Tucson 2.0 A/T",
     precio: "$25.800.000",
+    tipo: "SUV",
+    marca: "Hyundai",
     info: [
       "Motor naftero 2.0L",
       "Caja automática 6 velocidades",
@@ -19,6 +21,8 @@ const autos = [
   {
     titulo: "Citroën Berlingo Furgón 1.6",
     precio: "$22.500.000",
+    tipo: "Furgón",
+    marca: "Citroën",
     info: [
       "Motor diésel 1.6 HDI",
       "Caja manual 5 velocidades",
@@ -33,6 +37,8 @@ const autos = [
   {
     titulo: "Renault Kangoo II 1.5 DCI",
     precio: "$23.500.000",
+    tipo: "Furgón",
+    marca: "Renault",
     info: [
       "Motor diésel 1.5L",
       "Caja manual 6 velocidades",
@@ -47,6 +53,8 @@ const autos = [
   {
     titulo: "TOYOTA HILUX SRV AT 4x4",
     precio: "$54.900.000",
+    tipo: "Pick-up",
+    marca: "Toyota",
     info: [
       "Motor diésel 2.8L",
       "Caja automática 6 velocidades",
@@ -68,6 +76,8 @@ const autos = [
  {
     titulo: "Toyota RAV 4",
     precio: "$48.921.000",
+    tipo: "SUV",
+    marca: "Toyota",
     info: [
       "Motor 4 cil. de 2.5 L",
       "Transmisión Automatica",
@@ -83,6 +93,8 @@ const autos = [
   {
     titulo: "Renault Oroch",
     precio: "$42.200.000",
+    tipo: "Pick-up",
+    marca: "Renault",
     info: [
       "Motor 1.6",
       "Caja automática 6 velocidades",
@@ -98,10 +110,12 @@ const autos = [
   },
   {
     titulo: "Chevrolet Silverado",
-    precio: "$72.560.000",
+    precio: "$52.060.000",
+    tipo: "Pick-up",
+    marca: "Chevrolet",
     info: [
       "Motor 1.6",
-      "Transmisión automática de 10 velocidades",
+      "Transmisión Manual",
       "-",
       "0km"
     ],
@@ -120,6 +134,8 @@ const autos = [
  {
     titulo: "GR-Sport",
     precio: "$40.921.000",
+    tipo: "Sedán",
+    marca: "Toyota",
     info: [
       "Motor1.6",
       "Transmisión Automatica",
@@ -136,6 +152,8 @@ const autos = [
   {
     titulo: "Crown",
     precio: "$52.200.000",
+    tipo: "Sedán",
+    marca: "Toyota",
     info: [
       "Motor 1.8",
       "Caja automática 6 velocidades",
@@ -151,9 +169,11 @@ const autos = [
   {
     titulo: "SW4",
     precio: "$75.560.000",
+    tipo: "SUV",
+    marca: "Toyota",
     info: [
       "Motor 1.6",
-      "Transmisión automática de 10 velocidades",
+      "Transmisión automática",
       "-",
       "0km"
     ],
@@ -168,6 +188,8 @@ const autos = [
   {
     titulo: "T-Cross",
     precio: "$75.560.000",
+    tipo: "SUV",
+    marca: "Volkswagen",
     info: [
       "Motor 1.6",
       "Transmisión automática de 10 velocidades",
@@ -188,6 +210,8 @@ const autos = [
   {
     titulo: "Nivus",
     precio: "$75.560.000",
+    tipo: "SUV",
+    marca: "Volkswagen",
     info: [
       "Motor 1.6",
       "Transmisión automática de 10 velocidades",
@@ -203,6 +227,8 @@ const autos = [
   {
     titulo: "Amarok V6",
     precio: "$75.560.000",
+    tipo: "SUV",
+    marca: "Volkswagen",
     info: [
       "Motor 1.6",
       "Transmisión automática de 10 velocidades",
@@ -218,6 +244,8 @@ const autos = [
   {
     titulo: "Onix",
     precio: "$75.560.000",
+    tipo: "Hatchback",
+    marca: "Chevrolet", 
     info: [
       "Motor 1.6",
       "Transmisión automática de 10 velocidades",
@@ -232,6 +260,8 @@ const autos = [
     {
     titulo: "Onix Plus",
     precio: "$75.560.000",
+    tipo: "Sedán",
+    marca: "Chevrolet",
     info: [
       "Motor 1.6",
       "Transmisión automática de 10 velocidades",
@@ -246,6 +276,8 @@ const autos = [
     {
     titulo: "Cruze 5",
     precio: "$75.560.000",
+    tipo: "Hatchback",
+    marca: "Chevrolet",
     info: [
       "Motor 1.6",
       "Transmisión automática de 10 velocidades",
