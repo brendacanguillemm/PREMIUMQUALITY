@@ -353,22 +353,24 @@ botonesUsados.forEach((btn, i) => {
 
 
 //0KM
+//0KM
 const botones0km = document.querySelectorAll(".abrir0km");
 
 botones0km.forEach((btn, i) => {
   btn.addEventListener("click", () => {
-    const autos0km = autos0km[i];
-    titulo.textContent = autos0km.titulo;
-    precio.textContent = autos0km.precio;
+    const auto0km = autos0km[i]; // ✅ corregido
+
+    titulo.textContent = auto0km.titulo;
+    precio.textContent = auto0km.precio;
 
     info.innerHTML = `
-      <div><img src="../IMAGENESHTML/Combustible.png" alt=""> ${autos0km.info[0]}</div>
-      <div><img src="../IMAGENESHTML/Caja.png" alt=""> ${autos0km.info[1]}</div>
-      <div><img src="../IMAGENESHTML/Calendario.png" alt=""> ${autos0km.info[2]}</div>
-      <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> ${autos0km.info[3]}</div>
+      <div><img src="../IMAGENESHTML/Combustible.png" alt=""> ${auto0km.info[0]}</div>
+      <div><img src="../IMAGENESHTML/Caja.png" alt=""> ${auto0km.info[1]}</div>
+      <div><img src="../IMAGENESHTML/Calendario.png" alt=""> ${auto0km.info[2]}</div>
+      <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> ${auto0km.info[3]}</div>
     `;
 
-    slides.innerHTML = autos0km.imagenes
+    slides.innerHTML = auto0km.imagenes
       .map((src, idx) => `<img src="${src}" class="slide" style="display:${idx === 0 ? "block" : "none"}">`)
       .join("");
 
@@ -377,18 +379,6 @@ botones0km.forEach((btn, i) => {
   });
 });
 
-cerrar.addEventListener("click", () => dialog.close());
-
-// Función para mover el carrusel
-document.getElementById("prev").addEventListener("click", () => changeSlide(-1));
-document.getElementById("next").addEventListener("click", () => changeSlide(1));
-
-function changeSlide(n) {
-  const imgs = slides.querySelectorAll(".slide");
-  imgs[slideIndex].style.display = "none";
-  slideIndex = (slideIndex + n + imgs.length) % imgs.length;
-  imgs[slideIndex].style.display = "block";
-}
 
 
 
