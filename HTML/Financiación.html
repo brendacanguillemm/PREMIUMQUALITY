@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financiación - Premium Quality</title>
+  <link rel="stylesheet" href="../Diseño/DiseñoFinanciación.css">
+</head>
+
+<body>
+
+<header class="menu">
+  <div class="menu-left">
+    <img src="../IMAGENESHTML/LogoPremiumQuality.png" alt="PREMIUM QUALITY">
+    <span class="subtext">SERVICIOS<br>FINANCIEROS</span>
+  </div>
+
+  <nav class="menu-nav">
+    <div class="nav-item">
+      <img src="../IMAGENESHTML/Modelos.jpg" width="35"><br>MODELOS
+    </div>
+
+    <div class="nav-item dropdown">
+      <img src="../IMAGENESHTML/Compra.jpg" width="35"><br>COMPRA
+      <div class="dropdown-content">
+        <a href="../HTML/0KM.html">0KM</a>
+        <a href="#">Financiación</a>
+        <a href="../HTML/Usados.html">Usados</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <img src="../IMAGENESHTML/Srevicios.jpg" width="35"><br>SERVICIOS
+    </div>
+
+    <div class="nav-item">
+      <img src="../IMAGENESHTML/Ayuda.jpg" width="25"><br>AYUDA
+    </div>
+  </nav>
+</header>
+
+<main class="contenedor">
+
+  <section class="autos">
+    <h2>ELEGÍ EL AUTO QUE MÁS TE GUSTE</h2>
+    <div class="autos-lista">
+
+      <div class="auto" data-nombre="Toyota Hilux" data-img="../IMAGENESHTML/Toyota_Hilux0KM-SF.png">
+        <img src="../IMAGENESHTML/Toyota_Hilux0KM-SF.png" alt="Toyota Hilux">
+        <p>TOYOTA HILUX</p>
+        <button class="seleccionar">COTIZAR</button>
+      </div>
+
+      <div class="auto" data-nombre="Chevrolet Cruze" data-img="../IMAGENESHTML/ChevroletCruze-SF.png">
+        <img src="../IMAGENESHTML/ChevroletCruze-SF.png" alt="Chevrolet Cruze">
+        <p>CHEVROLET CRUZE</p>
+        <button class="seleccionar">COTIZAR</button>
+      </div>
+
+      <div class="auto" data-nombre="Renault Kardian" data-img="../IMAGENESHTML/RenaultKardian-SF.png">
+        <img src="../IMAGENESHTML/RenaultKardian-SF.png" alt="Renault Kardian">
+        <p>RENAULT KARDIAN</p>
+        <button class="seleccionar">COTIZAR</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="detalle oculto">
+
+    <div class="auto-detalle">
+      <img id="auto-img" src="" alt="Auto seleccionado">
+      <div>
+        <h2 id="auto-nombre"></h2>
+        <p>Seleccioná tu plan de financiación y obtené la mejor cuota del mercado.</p>
+      </div>
+    </div>
+
+    <div class="cuotas">
+      <p>SELECCIONÁ UN PLAN DE CUOTAS PARA CONOCER LA ESTIMACIÓN DE TU VEHÍCULO</p>
+      <div class="botones-cuotas">
+        <button data-cuotas="12">12</button>
+        <button data-cuotas="24">24</button>
+        <button data-cuotas="36">36</button>
+        <button data-cuotas="48">48</button>
+        <button data-cuotas="60">60</button>
+        <button data-cuotas="72">72</button>
+      </div>
+    </div>
+
+    <div class="plan">
+      <div><b>PLAZO</b><p id="plazo">—</p></div>
+      <div><b>IMPORTE</b><p id="importe">$6.000.000</p></div>
+      <div><b>TASA</b><p id="tasa">15%</p></div>
+      <div><b>ENTREGA</b><p id="entrega">$1.200.000</p></div>
+    </div>
+
+    <div class="resultado">
+      <h3>CUOTA MENSUAL ESTIMADA</h3>
+      <p id="resultado">Seleccioná un plan para calcular</p>
+    </div>
+    <div class="footer-col">
+    <button id="btn-contacto" class="btn-contacto">CONTÁCTANOS</button>
+  </div>
+  </section>
+</main>
+
+<section class="contacto oculto" id="form-contacto">
+  <h2>CONTACTANOS</h2>
+     Completá el siguiente formulario y nos pondremos en contacto con vos a la brevedad.</p>
+  <form class="form-contacto">
+    <label>Nombre completo</label>
+    <input type="text" placeholder="Tu nombre" required>
+
+    <label>Correo electrónico</label>
+    <input type="email" placeholder="tuemail@ejemplo.com" required>
+
+    <label>Mensaje</label>
+    <textarea placeholder="Escribí tu consulta aquí..." required></textarea>
+
+    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+  </form>
+</section>
+
+ 
+
+<footer class="footer">
+  <div class="logo-container">
+    <img src="../IMAGENESHTML/LogoPremiumQuality.png" width="350">
+  </div>
+  <div class="footer-col">
+    <h4>CANNING</h4>
+    <p><img src="../IMAGENESHTML/IconoUbicación.png" width="16"> Av. Mariano Castex 511 - Canning</p>
+    <p><img src="../IMAGENESHTML/IconoTelefono.png" width="16"> (+54 11) 2152-9350</p>
+    <p><a href="mailto:ConcesionariaPQ@gmail.com">ConcesionariaPQ@gmail.com</a></p>
+  </div>
+  <div class="footer-col">
+    <h4>HORARIO DE ATENCIÓN</h4>
+    <p>Lunes a Sábado</p>
+    <p>09:00 hs a 18:00 hs</p>
+  </div>
+</footer>
+
+<div class="copy">
+  © 2025 Concesionaria PREMIUM QUALITY
+</div>
+
+<script>
+  const autos = document.querySelectorAll('.auto');
+  const detalle = document.querySelector('.detalle');
+  const autoImg = document.getElementById('auto-img');
+  const autoNombre = document.getElementById('auto-nombre');
+  const botonesCuotas = document.querySelectorAll('.botones-cuotas button');
+  const resultado = document.getElementById('resultado');
+  const plazo = document.getElementById('plazo');
+
+  autos.forEach(auto => {
+    auto.querySelector('.seleccionar').addEventListener('click', () => {
+      autoImg.src = auto.dataset.img;
+      autoNombre.textContent = auto.dataset.nombre;
+      detalle.classList.remove('oculto');
+      window.scrollTo({ top: detalle.offsetTop - 50, behavior: 'smooth' });
+    });
+  });
+
+  botonesCuotas.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cuotas = parseInt(btn.dataset.cuotas);
+      const importe = 6000000;
+      const tasa = 0.15;
+      const entrega = 1200000;
+      const saldo = importe - entrega;
+      const cuota = (saldo * (1 + tasa)) / cuotas;
+      resultado.textContent = `$${cuota.toFixed(2)} por mes en ${cuotas} cuotas.`;
+      plazo.textContent = `${cuotas} meses`;
+    });
+  });
+
+  const btnContacto = document.getElementById('btn-contacto');
+  const formContacto = document.getElementById('form-contacto');
+
+  btnContacto.addEventListener('click', () => {
+    formContacto.classList.toggle('oculto');
+    window.scrollTo({ top: formContacto.offsetTop - 50, behavior: 'smooth' });
+  });
+</script>
+
+
+
+</body>
+</html>
