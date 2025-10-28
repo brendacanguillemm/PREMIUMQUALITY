@@ -1,0 +1,215 @@
+/* ==== Estilos Página de Ayuda ==== */
+
+body {
+  background-color: #f6f7fb;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+/* --- Navbar --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center; /* centramos todo el contenido */
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+}
+
+/* Contenedor general */
+.navbar .container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.titulo h1 {
+  margin: 0;
+  color: #001b5e;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Menú */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #001b5e;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.menu a i {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.menu a:hover,
+.menu .activo {
+  color: #0b0b53;
+  transform: scale(1.05);
+}
+
+/* --- Contenido --- */
+main {
+  padding-top: 140px;
+}
+
+.ayuda-container {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 40px 60px;
+}
+
+.ayuda-container h2 {
+  text-align: center;
+  color: #0b0b53;
+  font-size: 28px;
+}
+
+.ayuda-container p {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* --- Formulario --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #0b0b53;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form button {
+  background-color: #0b0b53;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #1d1d85;
+}
+
+/* --- Info extra --- */
+.info-extra {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.info-extra h3 {
+  color: #0b0b53;
+  margin-bottom: 10px;
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: 80px;
+  color: #000;
+  background-color: #fdfdfd;
+}
+
+.footer-top {
+  background-color: #000a44;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  padding: 15px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 60px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 230px;
+}
+
+.footer-info h3,
+.footer-horario h3 {
+  color: #000a44;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #000a44;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-info p,
+.footer-horario p {
+  margin: 6px 0;
+  color: #333;
+}
+
+.footer-copy {
+  background-color: #000a44;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
