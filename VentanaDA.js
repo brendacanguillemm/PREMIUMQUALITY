@@ -1,4 +1,3 @@
-// Autos Usados
 const autos = [
   {
     titulo: "Hyundai Tucson 2.0 A/T",
@@ -69,11 +68,10 @@ const autos = [
       "../IMAGENESHTML/TOYOTA4X4Usados5.jpg"
     ]
   },
-]
+];
 
-  //Autos Inicio 
-  const autosInicio = [
- {
+const autosInicio = [
+  {
     titulo: "Toyota RAV 4",
     precio: "$48.921.000",
     tipo: "SUV",
@@ -126,12 +124,10 @@ const autos = [
       "../IMAGENESHTML/Chevrolet-Silverado4.png"
     ]
   }
-]
+];
 
-  //Autos Okm
-  //TOYOTA
-  const autos0km = [
- {
+const autos0km = [
+  {
     titulo: "GR-Sport",
     precio: "$40.921.000",
     tipo: "Sedán",
@@ -147,7 +143,6 @@ const autos = [
       "../IMAGENESHTML/GR-Sport.jpg",
       "../IMAGENESHTML/GR-Sport.png"
     ]
-  
   },
   {
     titulo: "Crown",
@@ -180,11 +175,10 @@ const autos = [
     imagenes: [
       "../IMAGENESHTML/SW4-1.png",
       "../IMAGENESHTML/SW4-2.png",
-      "../IMAGENESHTML/SW4-3.jpg", 
+      "../IMAGENESHTML/SW4-3.jpg",
       "../IMAGENESHTML/SW4-4.png"
     ]
   },
-   //VOLKSWAGEN
   {
     titulo: "T-Cross",
     precio: "$75.560.000",
@@ -199,14 +193,13 @@ const autos = [
     imagenes: [
       "../IMAGENESHTML/VolkswagenT-Cross.jpg",
       "../IMAGENESHTML/T-Cross1.jpg",
-      "../IMAGENESHTML/T-Cross2.jpg", 
+      "../IMAGENESHTML/T-Cross2.jpg",
       "../IMAGENESHTML/T-Cross3.jpg",
       "../IMAGENESHTML/T-Cross4.jpg",
       "../IMAGENESHTML/T-Cross5.jpg",
       "../IMAGENESHTML/T-Cross6.jpg"
     ]
   },
-
   {
     titulo: "Nivus",
     precio: "$75.560.000",
@@ -237,15 +230,14 @@ const autos = [
     ],
     imagenes: [
       "../IMAGENESHTML/INTERIOR-CONFORT-2.jpg",
-      "../IMAGENESHTML/Amarok.jpg",
+      "../IMAGENESHTML/Amarok.jpg"
     ]
   },
-  //CHEVROLET
   {
     titulo: "Onix",
     precio: "$75.560.000",
     tipo: "Hatchback",
-    marca: "Chevrolet", 
+    marca: "Chevrolet",
     info: [
       "Motor 1.6",
       "Transmisión automática de 10 velocidades",
@@ -257,7 +249,7 @@ const autos = [
       "../IMAGENESHTML/OnixInterior.jpg"
     ]
   },
-    {
+  {
     titulo: "Onix Plus",
     precio: "$75.560.000",
     tipo: "Sedán",
@@ -273,7 +265,7 @@ const autos = [
       "../IMAGENESHTML/OnixInterior.jpg"
     ]
   },
-    {
+  {
     titulo: "Cruze 5",
     precio: "$75.560.000",
     tipo: "Hatchback",
@@ -293,91 +285,64 @@ const autos = [
 
 const dialog = document.getElementById("ventana");
 const cerrar = document.getElementById("cerrar");
-
 const titulo = document.getElementById("titulo-auto");
 const precio = document.getElementById("precio-auto");
 const info = document.getElementById("info-auto");
 const slides = document.getElementById("slides");
+const btnPrev = document.getElementById("prev");
+const btnNext = document.getElementById("next");
 
 let slideIndex = 0;
 
-// INICIO 
-const botonesInicio = document.querySelectorAll(".abrir-inicio");
+function mostrarAuto(auto) {
+  titulo.textContent = auto.titulo;
+  precio.textContent = auto.precio;
 
-botonesInicio.forEach((btn, i) => {
-  btn.addEventListener("click", () => {
-    const autoInicio = autosInicio[i];
-    titulo.textContent = autoInicio.titulo;
-    precio.textContent = autoInicio.precio;
+  info.innerHTML = `
+    <div><img src="../IMAGENESHTML/Combustible.png" alt=""> ${auto.info[0]}</div>
+    <div><img src="../IMAGENESHTML/Caja.png" alt=""> ${auto.info[1]}</div>
+    <div><img src="../IMAGENESHTML/Calendario.png" alt=""> ${auto.info[2]}</div>
+    <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> ${auto.info[3]}</div>
+  `;
 
-    info.innerHTML = `
-      <div><img src="../IMAGENESHTML/Combustible.png" alt=""> ${autoInicio.info[0]}</div>
-      <div><img src="../IMAGENESHTML/Caja.png" alt=""> ${autoInicio.info[1]}</div>
-      <div><img src="../IMAGENESHTML/Calendario.png" alt=""> ${autoInicio.info[2]}</div>
-      <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> ${autoInicio.info[3]}</div>
-    `;
+  slides.innerHTML = auto.imagenes
+    .map((src, i) => `<img src="${src}" class="slide" style="display:${i === 0 ? "block" : "none"}">`)
+    .join("");
 
-    slides.innerHTML = autoInicio.imagenes
-      .map((src, idx) => `<img src="${src}" class="slide" style="display:${idx === 0 ? "block" : "none"}">`)
-      .join("");
+  slideIndex = 0;
+  dialog.showModal();
+}
 
-    slideIndex = 0;
-    dialog.showModal();
+function cambiarSlide(direccion) {
+  const imagenes = slides.querySelectorAll(".slide");
+  if (imagenes.length === 0) return;
+
+  imagenes[slideIndex].style.display = "none";
+  slideIndex = (slideIndex + direccion + imagenes.length) % imagenes.length;
+  imagenes[slideIndex].style.display = "block";
+}
+
+
+btnPrev?.addEventListener("click", () => cambiarSlide(-1));
+btnNext?.addEventListener("click", () => cambiarSlide(1));
+
+cerrar?.addEventListener("click", () => dialog.close());
+
+
+function vincularBotones(claseBoton, listaAutos) {
+  const botones = document.querySelectorAll(claseBoton);
+  botones.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      const auto = listaAutos[i];
+      if (auto) mostrarAuto(auto);
+    });
   });
-});
+}
 
-//USADOS
-const botonesUsados = document.querySelectorAll(".abrir");
+if (typeof autosInicio !== "undefined") vincularBotones(".abrir-inicio", autosInicio);
+if (typeof autos0km !== "undefined") vincularBotones(".abrir0km", autos0km);
+if (typeof autos !== "undefined") vincularBotones(".abrir", autos);
 
-botonesUsados.forEach((btn, i) => {
-  btn.addEventListener("click", () => {
-    const auto = autos[i];
-    titulo.textContent = auto.titulo;
-    precio.textContent = auto.precio;
-
-    info.innerHTML = `
-      <div><img src="../IMAGENESHTML/Combustible.png" alt=""> ${auto.info[0]}</div>
-      <div><img src="../IMAGENESHTML/Caja.png" alt=""> ${auto.info[1]}</div>
-      <div><img src="../IMAGENESHTML/Calendario.png" alt=""> ${auto.info[2]}</div>
-      <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> ${auto.info[3]}</div>
-    `;
-
-    slides.innerHTML = auto.imagenes
-      .map((src, idx) => `<img src="${src}" class="slide" style="display:${idx === 0 ? "block" : "none"}">`)
-      .join("");
-
-    slideIndex = 0;
-    dialog.showModal();
-  });
-});
-
-
-//0KM
-//0KM
-const botones0km = document.querySelectorAll(".abrir0km");
-
-botones0km.forEach((btn, i) => {
-  btn.addEventListener("click", () => {
-    const auto0km = autos0km[i]; // ✅ corregido
-
-    titulo.textContent = auto0km.titulo;
-    precio.textContent = auto0km.precio;
-
-    info.innerHTML = `
-      <div><img src="../IMAGENESHTML/Combustible.png" alt=""> ${auto0km.info[0]}</div>
-      <div><img src="../IMAGENESHTML/Caja.png" alt=""> ${auto0km.info[1]}</div>
-      <div><img src="../IMAGENESHTML/Calendario.png" alt=""> ${auto0km.info[2]}</div>
-      <div><img src="../IMAGENESHTML/IconoKm.png" alt=""> ${auto0km.info[3]}</div>
-    `;
-
-    slides.innerHTML = auto0km.imagenes
-      .map((src, idx) => `<img src="${src}" class="slide" style="display:${idx === 0 ? "block" : "none"}">`)
-      .join("");
-
-    slideIndex = 0;
-    dialog.showModal();
-  });
-});
 
 
 

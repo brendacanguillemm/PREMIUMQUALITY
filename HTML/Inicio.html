@@ -27,7 +27,7 @@
       <img src="../IMAGENESHTML/Compra.jpg" width="35"><br>COMPRA
       <div class="dropdown-content">
         <a href="../HTML/0KM.html">0KM</a>
-        <a href="#">Financiación</a>
+        <a href="../HTML/Financiación.html">Financiación</a>
         <a href="../HTML/Usados.html">Usados</a>
       </div>
     </div>
@@ -100,8 +100,7 @@
       <div class="copy">
         © 2025 Concesionaria PREMIUM QUALITY
       </div>
-
-  <dialog id="ventana">
+ <dialog id="ventana">
   <h2 id="titulo-auto"></h2>
 
   <div class="carousel">
@@ -110,18 +109,41 @@
     <button class="next" id="next">&#10095;</button>
   </div>
 
-  <hr>
-
+  <hr />
   <span class="price" id="precio-auto"></span>
-
-  <!--Acá se van a insertar dinámicamente los datos del vehículo -->
   <div class="car-info" id="info-auto"></div>
+  <hr />
+  <br />
 
-  <hr>
-  <br>
-   Ingrese un correo  <input>  <br><br>
+  <label for="email">Ingrese un correo para comunicarnos:</label>
+  <input type="email" id="email" placeholder="tuemail@gmail.com" required />
+  <button id="enviar">Enviar</button>
+
+  <br /><br />
   <button id="cerrar">Cerrar</button>
-  </dialog>
+</dialog>
+
+<script>
+  document.getElementById("enviar").addEventListener("click", () => {
+    const email = document.getElementById("email").value.trim();
+    if (!email) {
+      alert("Por favor ingrese su correo.");
+      return;
+    }
+
+    const asunto = encodeURIComponent("Consulta sobre vehículo - Premium Quality");
+    const mensaje = encodeURIComponent(
+      `Hola, estoy interesado en uno de los vehículos publicados. 
+Me gustaría contactar con un vendedor para obtener más información.
+
+Mi correo de contacto es: ${email}`
+    );
+
+    const destino = "ConcesionariaPQ@gmail.com";
+
+    window.location.href = `mailto:${destino}?subject=${asunto}&body=${mensaje}`;
+  });
+</script>
 
    <script src="../VentanaDA.js"></script> 
    <script src="../Carrusel.js"></script>

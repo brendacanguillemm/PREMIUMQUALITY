@@ -12,33 +12,44 @@
 
 <body>
 <div id="modalContainer"></div>
+<header class="menu">
+  <div class="menu-left">
+    <a href="../HTML/Inicio.html">
+      <img src="../IMAGENESHTML/LogoPremiumQuality.png" alt="Premium Quality" class="logo">
+    </a>
+    <div class="subtext">
+      CONCESIONARIA<br>AUTOMOTRIZ
+    </div>
+  </div>
 
-  <header class="navbar">
-    <div class="logo-section">
-      <a href="../HTML/Inicio.html">
-        <div class="logo">  
-        <img src="../IMAGENESHTML/LogoPremiumQuality.png" alt="Premium Quality" class="logo"> </div>
-      </a>
-      <div class="divider"></div>
-      <span class="slogan">CONCESIONARIA<br>AUTOMOTRIZ</span>
+  <nav class="menu-nav">
+    <div class="nav-item">
+      <img src="../IMAGENESHTML/Modelos.jpg" width="35" alt="Modelos">
+      <div>MODELOS</div>
     </div>
 
-    <nav class="nav-links">
-      <a href="#"><img src="../IMAGENESHTML/Modelos.jpg" alt="Modelos">MODELOS</a>
-
-      <div class="dropdown">
-        <a href="#"><img src="../IMAGENESHTML/Compra.jpg" alt="Compra">COMPRA</a>
-        <div class="dropdown-content">
-          <a href="0KM.html">OKM</a>
-          <a href="#">Financiación</a>
-          <a href="#">Usados</a>
-        </div>
+    <div class="nav-item dropdown">
+      <img src="../IMAGENESHTML/Compra.jpg" width="35" alt="Compra">
+      <div>COMPRA</div>
+      <div class="dropdown-content">
+        <a href="../HTML/0KM.html">0KM</a>
+        <a href="../HTML/Financiación.html">Financiación</a>
+        <a href="../HTML/Usados.html">Usados</a>
       </div>
+    </div>
 
-      <a href="#"><img src="../IMAGENESHTML/Srevicios.jpg" alt="Servicios">SERVICIOS</a>
-      <a href="#"><img src="../IMAGENESHTML/Ayuda.jpg" alt="Ayuda">AYUDA</a>
-    </nav>
-  </header>
+    <div class="nav-item">
+      <img src="../IMAGENESHTML/Srevicios.jpg" width="35" alt="Servicios">
+      <div>SERVICIOS</div>
+    </div>
+
+    <div class="nav-item">
+      <img src="../IMAGENESHTML/Ayuda.jpg" width="35" alt="Ayuda">
+      <div>AYUDA</div>
+    </div>
+  </nav>
+</header>
+
 
   <!-- Banner azul -->
   <section class="banner">
@@ -48,56 +59,61 @@
   <!-- Contenido principal -->
   <main class="main-container">
     <!-- Filtros -->
-    <aside class="filters">
-      <h3>Filtros</h3>
+ <aside class="filtros">
+  <h2>Filtros</h2>
 
-      <div class="filter-group">
-  <label>Precio</label>
-  <div class="price-range">
-    <div class="price-range-labels">
-      <span id="min-price">$12.800.000</span>
-      <span id="max-price">$60.000.000</span>
+  <!-- === PRECIO === -->
+  <div class="filter-group">
+    <label class="titulo-filtro">Precio</label>
+    <div class="rango-precio">
+      <span id="minPrecio">$12.800.000</span>
+      <span id="maxPrecio">$60.000.000</span>
     </div>
-    <input type="range" min="12800000" max="60000000" value="12800000" id="price-slider">
+    <input type="range" min="12800000" max="60000000" value="60000000" id="precioRange">
   </div>
-</div>
 
-      <div class="filter-group">
-        <label>Tipo</label>
-        <ul>
-          <li><input type="checkbox"> Furgón</li>
-          <li><input type="checkbox"> Hatchback</li>
-          <li><input type="checkbox"> Pick-up</li>
-          <li><input type="checkbox"> Sedán</li>
-          <li><input type="checkbox"> SUV</li>
-        </ul>
-      </div>
+  <!-- === TIPO === -->
+  <div class="filter-group">
+    <label class="titulo-filtro">Tipo</label>
+    <ul>
+      <li><label><input type="checkbox" class="tipoFiltro" value="Furgón"> Furgón</label></li>
+      <li><label><input type="checkbox" class="tipoFiltro" value="Hatchback"> Hatchback</label></li>
+      <li><label><input type="checkbox" class="tipoFiltro" value="Pick-up"> Pick-up</label></li>
+      <li><label><input type="checkbox" class="tipoFiltro" value="Sedán"> Sedán</label></li>
+      <li><label><input type="checkbox" class="tipoFiltro" value="SUV"> SUV</label></li>
+    </ul>
+  </div>
 
-      <div class="filter-group">
-        <label>Marcas</label>
-        <ul>
-          <li><input type="checkbox"> Chevrolet</li>
-          <li><input type="checkbox"> Ford</li>
-          <li><input type="checkbox"> Toyota</li>
-          <li><input type="checkbox"> Renault</li>
-          <li><input type="checkbox"> Volkswagen</li>
-        </ul>
-      </div>
+  <!-- === MARCAS === -->
+  <div class="filter-group">
+    <label class="titulo-filtro">Marcas</label>
+    <ul>
+      <li><label><input type="checkbox" class="marcaFiltro" value="Chevrolet"> Chevrolet</label></li>
+      <li><label><input type="checkbox" class="marcaFiltro" value="Ford"> Ford</label></li>
+      <li><label><input type="checkbox" class="marcaFiltro" value="Toyota"> Toyota</label></li>
+      <li><label><input type="checkbox" class="marcaFiltro" value="Renault"> Renault</label></li>
+      <li><label><input type="checkbox" class="marcaFiltro" value="Volkswagen"> Volkswagen</label></li>
+    </ul>
+  </div>
 
-      <button class="apply-btn">Aplicar filtros</button>
-      <a href="#" class="reset-link">Reiniciar filtros</a>
-      <hr>
+  <!-- === BOTONES === -->
+  <button id="btnFiltrar" class="boton-aplicar">Aplicar filtros</button>
+  <button id="btnReiniciar" class="reiniciar">Reiniciar filtros</button>
 
-      <div class="social">
-        <p><strong>SÍGUENOS</strong></p>
-        <img src="../IMAGENESHTML/LogoPremiumQuality.png" width="150" alt="">
-        <p>TU CONCESIONARIA DE CONFIANZA</p>
-        <div class="social-icons">
-          <a href="#"><img src="../IMAGENESHTML/IconoWsp.png" width="30"></a>
-          <a href="#"><img src="../IMAGENESHTML/IconoInstagram.png" width="30"></a>
-        </div>
-      </div>
-    </aside>
+  <hr>
+
+  <!-- === REDES SOCIALES === -->
+  <div class="social">
+    <p class="titulo-redes">SÍGUENOS</p>
+    <img src="../IMAGENESHTML/LogoPremiumQuality.png" width="150" alt="Logo Premium Quality">
+    <p class="texto-confianza">TU CONCESIONARIA DE CONFIANZA</p>
+    <div class="social-icons">
+      <a href="#"><img src="../IMAGENESHTML/IconoWsp.png" width="30" alt="WhatsApp"></a>
+      <a href="#"><img src="../IMAGENESHTML/IconoInstagram.png" width="30" alt="Instagram"></a>
+    </div>
+  </div>
+</aside>
+
 
       <!-- Catálogo -->
     <section class="catalog">
@@ -168,18 +184,41 @@
     <button class="next" id="next">&#10095;</button>
   </div>
 
-  <hr>
-
+  <hr />
   <span class="price" id="precio-auto"></span>
-
-  <!--Acá se van a insertar dinámicamente los datos del vehículo -->
   <div class="car-info" id="info-auto"></div>
+  <hr />
+  <br />
 
-  <hr>
-  <br>
- Ingrese un correo  <input><button>Enviar</button>  <br><br>
+  <label for="email">Ingrese un correo para comunicarnos:</label>
+  <input type="email" id="email" placeholder="tuemail@gmail.com" required />
+  <button id="enviar">Enviar</button>
+
+  <br /><br />
   <button id="cerrar">Cerrar</button>
-  </dialog>
+</dialog>
+
+<script>
+  document.getElementById("enviar").addEventListener("click", () => {
+    const email = document.getElementById("email").value.trim();
+    if (!email) {
+      alert("Por favor ingrese su correo.");
+      return;
+    }
+
+    const asunto = encodeURIComponent("Consulta sobre vehículo - Premium Quality");
+    const mensaje = encodeURIComponent(
+      `Hola, estoy interesado en uno de los vehículos publicados. 
+Me gustaría contactar con un vendedor para obtener más información.
+
+Mi correo de contacto es: ${email}`
+    );
+
+    const destino = "ConcesionariaPQ@gmail.com";
+
+    window.location.href = `mailto:${destino}?subject=${asunto}&body=${mensaje}`;
+  });
+</script>
 
    <script src="../VentanaDA.js"></script> 
    <script src="../Carrusel.js"></script>

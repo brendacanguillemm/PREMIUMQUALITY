@@ -6,63 +6,59 @@ body {
 }
 
 /* ===== HEADER ===== */
-.navbar {
-  background-color: #fff;
+.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 12px 40px;
+  background-color: #fff;
   border-bottom: 3px solid #010340;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.logo-section {
+/* Logo y texto de la izquierda */
+.menu-left {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.logo-img {
-  width: 160px;
+.menu-left img {
+  width: 230px;
+  vertical-align: middle;
 }
 
-.slogan {
-  font-size: 14px;
-  font-weight: bold;
-  color: #010340;
-  line-height: 1.2;
+.subtext {
+  font-style: italic;
+  font-size: 16px;
+  color: #555;
+  text-align: left;
 }
 
-.menu {
+/* Navegación principal (MODELOS, COMPRA, SERVICIOS, AYUDA) */
+.menu-nav {
   display: flex;
-  align-items: center;
-  gap: 35px;
+  gap: 45px;
 }
 
-.menu a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #010340;
-  font-weight: bold;
+.nav-item {
+  text-align: center;
+  cursor: pointer;
   font-size: 14px;
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  color: #3a3aff;
-  transform: scale(1.05);
-}
-
-.menu img {
-  width: 35px;
-  margin-bottom: 5px;
+  color: #010340;
+  position: relative;
 }
 
 /* Dropdown */
 .dropdown {
   position: relative;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -73,9 +69,11 @@ body {
   padding: 8px;
   z-index: 100;
 }
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 .dropdown-content a {
   color: #010340;
   padding: 5px 10px;
@@ -83,6 +81,7 @@ body {
   display: block;
   border-radius: 5px;
 }
+
 .dropdown-content a:hover {
   background-color: #f2f2f2;
 }
@@ -94,6 +93,7 @@ body {
   text-align: center;
   padding: 15px;
   font-size: 18px;
+  margin-top: 90px;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */

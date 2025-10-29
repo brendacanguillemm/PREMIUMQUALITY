@@ -13,31 +13,51 @@
   <div id="modalContainer"></div>
 
   <!-- ===== HEADER ===== -->
-  <header class="navbar">
-    <div class="logo-section">
-      <a href="../HTML/Inicio.html" class="logo-link">
-        <img src="../IMAGENESHTML/LogoPremiumQuality.png" alt="Premium Quality" class="logo-img" />
+ <header class="menu">
+  <div class="menu-left">
+    <a href="../HTML/Inicio.html">
+      <img src="../IMAGENESHTML/LogoPremiumQuality.png" alt="Premium Quality">
+    </a>
+    <div class="subtext">
+      CONCESIONARIA<br>AUTOMOTRIZ
+    </div>
+  </div>
+
+  <nav class="menu-nav">
+    <div class="nav-item">
+      <a href="#">
+        <img src="../IMAGENESHTML/Modelos.jpg" alt="Modelos"><br>
+        MODELOS
       </a>
-      <div class="slogan">
-        CONCESIONARIA<br />AUTOMOTRIZ
+    </div>
+
+    <div class="nav-item dropdown">
+      <a href="#">
+        <img src="../IMAGENESHTML/Compra.jpg" alt="Compra"><br>
+        COMPRA
+      </a>
+      <div class="dropdown-content">
+        <a href="../HTML/0KM.html">OKM</a>
+        <a href="../HTML/Financiación.html">Financiación</a>
+        <a href="../HTML/Financiación.html">Usados</a>
       </div>
     </div>
 
-    <nav class="menu">
-      <a href="#"><img src="../IMAGENESHTML/Modelos.jpg" alt="Modelos" /><span>MODELOS</span></a>
-      <div class="dropdown">
-        <a href="#"><img src="../IMAGENESHTML/Compra.jpg" alt="Compra" /><span>COMPRA</span></a>
-        <div class="dropdown-content">
-          <a href="0KM.html">OKM</a>
-          <a href="#">Financiación</a>
-          <a href="#">Usados</a>
-        </div>
-      </div>
-      <a href="#"><img src="../IMAGENESHTML/Srevicios.jpg" alt="Servicios" /><span>SERVICIOS</span></a>
-      <a href="#"><img src="../IMAGENESHTML/Ayuda.jpg" alt="Ayuda" /><span>AYUDA</span></a>
-    </nav>
-  </header>
+    <div class="nav-item">
+      <a href="#">
+        <img src="../IMAGENESHTML/Srevicios.jpg" alt="Servicios"><br>
+        SERVICIOS
+      </a>
+    </div>
 
+    <div class="nav-item">
+      <a href="#">
+        <img src="../IMAGENESHTML/Ayuda.jpg" alt="Ayuda"><br>
+        AYUDA
+      </a>
+    </div>
+  </nav>
+</header>
   <!-- ===== BANNER ===== -->
   <section class="banner">
     <p>¡Personalizá y cotizá tu 0KM de manera simple y práctica!</p>
@@ -96,23 +116,23 @@
       <div class="marca-grid">
         <div class="card"><img src="../IMAGENESHTML/ToyotaCorollaGR-Sport.jpg" /><p>GR-Sport</p><button class="abrir0km">+</button></div>
         <div class="card"><img src="../IMAGENESHTML/ToyotaCrown.jpg" /><p>Crown</p><button class="abrir0km">+</button></div>
-        <div class="card"><img src="../IMAGENESHTML/ToyotaSW4.jpg" /><p>SW4</p><button class="abrir">+</button></div>
+        <div class="card"><img src="../IMAGENESHTML/ToyotaSW4.jpg" /><p>SW4</p><button class="abrir0km">+</button></div>
       </div>
 
       <!-- ===== VOLKSWAGEN ===== -->
       <h2>VOLKSWAGEN</h2>
       <div class="marca-grid">
-        <div class="card"><img src="../IMAGENESHTML/VolkswagenT-Cross.jpg" /><p>T-Cross</p><button class="abrir">+</button></div>
-        <div class="card"><img src="../IMAGENESHTML/VolkswagenNivus.jpg" /><p>Nivus</p><button class="abrir">+</button></div>
-        <div class="card"><img src="../IMAGENESHTML/VolkswagenAmarokV6.jpg" /><p>Amarok V6</p><button class="abrir">+</button></div>
+        <div class="card"><img src="../IMAGENESHTML/VolkswagenT-Cross.jpg" /><p>T-Cross</p><button class="abrir0km">+</button></div>
+        <div class="card"><img src="../IMAGENESHTML/VolkswagenNivus.jpg" /><p>Nivus</p><button class="abrir0km">+</button></div>
+        <div class="card"><img src="../IMAGENESHTML/VolkswagenAmarokV6.jpg" /><p>Amarok V6</p><button class="abrir0km">+</button></div>
       </div>
 
       <!-- ===== CHEVROLET ===== -->
       <h2>CHEVROLET</h2>
       <div class="marca-grid">
-        <div class="card"><img src="../IMAGENESHTML/ChevroletOnix.jpg" /><p>Onix</p><button class="abrir">+</button></div>
-        <div class="card"><img src="../IMAGENESHTML/ChevroletOnixPlus.jpg" /><p>Onix Plus</p><button class="abrir">+</button></div>
-        <div class="card"><img src="../IMAGENESHTML/ChevroletCruze5.jpg" /><p>Cruze 5</p><button class="abrir">+</button></div>
+        <div class="card"><img src="../IMAGENESHTML/ChevroletOnix.jpg" /><p>Onix</p><button class="abrir0km">+</button></div>
+        <div class="card"><img src="../IMAGENESHTML/ChevroletOnixPlus.jpg" /><p>Onix Plus</p><button class="abrir0km">+</button></div>
+        <div class="card"><img src="../IMAGENESHTML/ChevroletCruze5.jpg" /><p>Cruze 5</p><button class="abrir0km">+</button></div>
       </div>
     </section>
 
@@ -142,30 +162,54 @@
 
   <!-- ===== MODAL ===== -->
   <dialog id="ventana">
-    <h2 id="titulo-auto"></h2>
+  <h2 id="titulo-auto"></h2>
 
-    <div class="carousel">
-      <button class="prev" id="prev">&#10094;</button>
-      <div class="slides" id="slides"></div>
-      <button class="next" id="next">&#10095;</button>
-    </div>
+  <div class="carousel">
+    <button class="prev" id="prev">&#10094;</button>
+    <div class="slides" id="slides"></div>
+    <button class="next" id="next">&#10095;</button>
+  </div>
 
-    <hr />
-    <span class="price" id="precio-auto"></span>
-    <div class="car-info" id="info-auto"></div>
-    <hr />
-    <br />
-    <label>Ingrese un correo</label>
-    <input type="email" /> <button>Enviar</button>
-    <br /><br />
-    <button id="cerrar">Cerrar</button>
+  <hr />
+  <span class="price" id="precio-auto"></span>
+  <div class="car-info" id="info-auto"></div>
+  <hr />
+  <br />
 
+  <label for="email">Ingrese un correo para comunicarnos:</label>
+  <input type="email" id="email" placeholder="tuemail@gmail.com" required />
+  <button id="enviar">Enviar</button>
 
-  </dialog>
+  <br /><br />
+  <button id="cerrar">Cerrar</button>
+</dialog>
+
+<script>
+  document.getElementById("enviar").addEventListener("click", () => {
+    const email = document.getElementById("email").value.trim();
+    if (!email) {
+      alert("Por favor ingrese su correo.");
+      return;
+    }
+
+    const asunto = encodeURIComponent("Consulta sobre vehículo - Premium Quality");
+    const mensaje = encodeURIComponent(
+      `Hola, estoy interesado en uno de los vehículos publicados. 
+Me gustaría contactar con un vendedor para obtener más información.
+
+Mi correo de contacto es: ${email}`
+    );
+
+    const destino = "ConcesionariaPQ@gmail.com";
+
+    window.location.href = `mailto:${destino}?subject=${asunto}&body=${mensaje}`;
+  });
+</script>
+
 
   <script src="../VentanaDA.js"></script>
   <script src="../Carrusel.js"></script>
-  
+  <script src="../FiltrosUsados.js"></script>
 
 </body>
 </html>
